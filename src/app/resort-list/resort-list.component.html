@@ -1,0 +1,33 @@
+<div class="element-left">
+    <div class="element-bg-img">
+        <img
+                class="img-responsive"
+                [src]="'assets/images/resort' + selectedResort.id + '.jpg'">
+    </div>
+
+    <div class="element-left-bottom">
+
+        <div class="village">
+            <div class="activity_box">
+                <div class="scrollbar" id="style-2">
+                    <div *ngFor="let resort of resortList; let i = index">
+                        <div class="activity-row" (click)="onResortSelect.emit(resort)">
+                            <div class="activity-desc">
+                                <h5>{{resort.city}}</h5>
+                                <p>{{resort.country}}</p>
+                            </div>
+                            <div class="activity-img">
+                                <ul>
+                                    <li>
+                                        <img [src]="'assets/images/resort' + i + '.jpg'"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

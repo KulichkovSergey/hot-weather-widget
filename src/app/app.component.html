@@ -1,0 +1,26 @@
+<h1>Hot Weather Widget</h1>
+
+<div class="element">
+    <app-resort-list
+            [resortList]="resortList"
+            [selectedResort]="selectedResort"
+            (onResortSelect)="selectedResort = $event">
+    </app-resort-list>
+
+    <div class="element-right">
+        <app-resort-info
+                [selectedResort]="selectedResort"
+                [photoUrl]="photoUrl">
+        </app-resort-info>
+
+        <app-resort-weather
+                [temperature]="selectedResort.temperature">
+        </app-resort-weather>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+
+
+
