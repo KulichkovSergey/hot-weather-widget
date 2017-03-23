@@ -25,7 +25,7 @@ export class ResortListComponent implements OnInit {
 
     public constructor() {
     }
-
+     
     public  ngOnInit() {
     }
 
