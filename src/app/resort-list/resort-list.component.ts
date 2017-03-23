@@ -15,7 +15,7 @@ import {
 export class ResortListComponent implements OnInit {
 
     @Input()
-    public resortList: [resort];
+    public resortList: resort[];
 
     @Input()
     public selectedResort: resort;
