@@ -1,0 +1,14 @@
+<div class="activity-row" (click)="onResortSelect.emit(resort)">
+    <div class="activity-desc">
+        <h5>{{resort.city}}</h5>
+        <p>{{resort.country}}</p>
+    </div>
+    <div class="activity-img">
+        <ul>
+            <li>
+                <img [src]="resort.photoUrl"/>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>

@@ -7,6 +7,7 @@ import {ResortWeatherComponent} from './resort-weather/resort-weather.component'
 import {ResortInfoComponent} from './resort-info/resort-info.component';
 import {ResortListComponent} from './resort-list/resort-list.component';
 import {ResortCountryPipe} from "./shared/pipes/resort-country.pipe";
+import {ResortItemComponent} from './resort-list/resort-item/resort-item.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import {ResortCountryPipe} from "./shared/pipes/resort-country.pipe";
         ResortWeatherComponent,
         ResortInfoComponent,
         ResortListComponent,
-        ResortCountryPipe
+        ResortCountryPipe,
+        ResortItemComponent
     ],
     imports: [
         BrowserModule

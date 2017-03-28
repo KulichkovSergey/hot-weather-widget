@@ -1,10 +1,12 @@
 <div class="element-left">
+
     <div class="element-bg-img">
         <img class="img-responsive"
              [src]="selectedResort.photoUrl">
     </div>
 
     <div class="element-left-bottom">
+
         <div class="ele-strip">
             <ul>
                 <li *ngFor="let country of countries"
@@ -14,27 +16,19 @@
                 </li>
             </ul>
         </div>
+
         <div class="village">
             <div class="activity_box">
                 <div class="scrollbar" id="style-2">
-                    <div *ngFor="let resort of resortList | resortCountry: _selectedCountry; let i = index">
-                        <div class="activity-row" (click)="onResortSelect.emit(resort)">
-                            <div class="activity-desc">
-                                <h5>{{resort.city}}</h5>
-                                <p>{{resort.country}}</p>
-                            </div>
-                            <div class="activity-img">
-                                <ul>
-                                    <li>
-                                        <img [src]="resort.photoUrl"/>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
+
+                    <app-resort-item *ngFor="let resort of resortList | resortCountry: _selectedCountry"
+                                     [resort]="resort"
+                                     (onResortSelect)="onResortSelect.emit(resort)">
+                    </app-resort-item>
+
                 </div>
             </div>
         </div>
+
     </div>
 </div>

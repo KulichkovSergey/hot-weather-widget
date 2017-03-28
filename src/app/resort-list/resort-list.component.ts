@@ -33,5 +33,4 @@ export class ResortListComponent {
 
     @Output()
     public onResortSelect: EventEmitter<{}> = new EventEmitter();
-
 }
