@@ -1,7 +1,6 @@
 import {
     Component,
-    Input,
-    OnInit
+    Input
 } from '@angular/core';
 
 @Component({
@@ -10,17 +9,8 @@ import {
     styleUrls: ['./resort-weather.component.css']
 })
 
-export class ResortWeatherComponent implements OnInit {
+export class ResortWeatherComponent {
 
     @Input()
-    public temperature: {
-        air: number,
-        water: number
-    };
-
-    public constructor() {
-    }
-
-    public ngOnInit() {
-    }
+    public temperature: Temperature;
 }

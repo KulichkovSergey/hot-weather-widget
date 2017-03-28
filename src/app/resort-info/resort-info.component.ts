@@ -1,7 +1,6 @@
 import {
   Component,
   Input,
-  OnInit
 } from '@angular/core';
 
 @Component({
@@ -9,18 +8,8 @@ import {
   templateUrl: './resort-info.component.html',
   styleUrls: ['./resort-info.component.css']
 })
-export class ResortInfoComponent implements OnInit {
+export class ResortInfoComponent {
 
   @Input()
-  public photoUrl: string;
-
-  @Input()
-  public selectedResort: resort;
-
-  public constructor() {
-  }
-
-  public  ngOnInit() {
-  }
-
+  public selectedResort: Resort;
 }

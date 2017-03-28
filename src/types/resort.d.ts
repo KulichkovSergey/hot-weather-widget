@@ -1,11 +1,9 @@
-type resort = {
+type Resort = {
     id: number,
     city: string,
     country: string,
-    temperature: {
-        air: number,
-        water: number
-    };
+    temperature: Temperature,
     followers: number,
     following: number,
+    photoUrl: string
 };

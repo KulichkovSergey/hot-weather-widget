@@ -2,7 +2,6 @@ import {
     Component,
     EventEmitter,
     Input,
-    OnInit,
     Output
 } from '@angular/core';
 
@@ -12,21 +11,27 @@ import {
     styleUrls: ['./resort-list.component.css']
 })
 
-export class ResortListComponent implements OnInit {
+export class ResortListComponent {
 
     @Input()
-    public resortList: [resort];
+    public resortList: Resort[];
 
     @Input()
-    public selectedResort: resort;
+    public selectedResort: Resort;
+
+    public countries: string[] = ['All', 'Portugal', 'Spain'];
+
+    private _selectedCountry: string = this.countries[0];
+
+    public setSelectedCountry(country: string): void {
+        this._selectedCountry = country;
+    }
+
+    public isSelectedCountry(country: string): boolean {
+        return this._selectedCountry === country;
+    }
 
     @Output()
     public onResortSelect: EventEmitter<{}> = new EventEmitter();
-
-    public constructor() {
-    }
-
-    public  ngOnInit() {
-    }
 
 }

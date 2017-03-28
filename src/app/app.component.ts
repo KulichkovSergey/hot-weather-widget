@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+import {resorts} from './shared/data/resorts';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -8,55 +10,7 @@ import {Component} from '@angular/core';
 
 export class AppComponent {
 
-    public resortList: [resort] = [
-        {
-            id: 0,
-            city: 'Portu',
-            country: 'Portugal',
-            temperature: {
-                air: 25,
-                water: 17
-            },
-            followers: 145,
-            following: 43,
-        },
-        {
-            id: 1,
-            city: 'Lisbon',
-            country: 'Portugal',
-            temperature: {
-                air: 22,
-                water: 16
-            },
-            followers: 355,
-            following: 45,
-        },
-        {
-            id: 2,
-            city: 'Barcelona',
-            country: 'Spain',
-            temperature: {
-                air: 29,
-                water: 21
-            },
-            followers: 1754,
-            following: 555,
-        },
-        {
-            id: 3,
-            city: 'Valencia',
-            country: 'Spain',
-            temperature: {
-                air: 27,
-                water: 22
-            },
-            followers: 343,
-            following: 46,
-        }
-    ];
+    public resortList: Resort[] = resorts;
 
-    public selectedResort: resort = this.resortList[0];
-
-    public constructor() {
-    }
+    public selectedResort: Resort = this.resortList[0];
 }

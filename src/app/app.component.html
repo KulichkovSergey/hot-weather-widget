@@ -1,5 +1,7 @@
 <h1>Hot Weather Widget</h1>
 
+{{photoUrl}}
+
 <div class="element">
     <app-resort-list
             [resortList]="resortList"
@@ -9,8 +11,7 @@
 
     <div class="element-right">
         <app-resort-info
-                [selectedResort]="selectedResort"
-                [photoUrl]="photoUrl">
+                [selectedResort]="selectedResort">
         </app-resort-info>
 
         <app-resort-weather
@@ -20,7 +21,3 @@
 
     <div class="clear"></div>
 </div>
-
-
-
-
